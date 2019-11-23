@@ -1,0 +1,17 @@
+% Encoding: UTF-8
+
+@Online{ubuntu_man_preseeding,
+  title     = {Ubuntu Manual - Installation mittels Preseeding},
+  timestamp = {2019-10-25},
+  url       = {https://help.ubuntu.com/lts/installation-guide/amd64/apb.html},
+  urldate   = {2019-10-25},
+}
+
+@Online{urbanpenguin_preseeding_wp,
+  title     = {Beschreibung der automatischen Installation von theurbanpenguin},
+  timestamp = {2019-10-25},
+  url       = {https://www.theurbanpenguin.com/auto-installing-ubuntu-16-04/},
+  urldate   = {2019-10-25},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

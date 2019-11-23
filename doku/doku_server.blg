@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'doku_server.blg'
+[30] biber:313> INFO - === Fr Okt 25, 2019, 21:35:03
+[52] Biber.pm:371> INFO - Reading 'doku_server.bcf'
+[114] Biber.pm:857> INFO - Found 3 citekeys in bib section 0
+[129] Biber.pm:3981> INFO - Processing section 0
+[139] Biber.pm:4154> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[140] bibtex.pm:1468> INFO - LaTeX decoding ...
+[144] bibtex.pm:1294> INFO - Found BibTeX data source 'literatur.bib'
+[156] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[156] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[157] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[157] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[164] bbl.pm:617> INFO - Writing 'doku_server.bbl' with encoding 'latin1'
+[165] bbl.pm:720> INFO - Output to doku_server.bbl

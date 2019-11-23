@@ -1,0 +1,73 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{urbanpenguin_preseeding_wp}{online}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeltitlesource}{title}
+      \field{title}{Beschreibung der automatischen Installation von theurbanpenguin}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.theurbanpenguin.com/auto-installing-ubuntu-16-04/
+      \endverb
+      \verb{url}
+      \verb https://www.theurbanpenguin.com/auto-installing-ubuntu-16-04/
+      \endverb
+    \endentry
+    \entry{ubuntuusers_grub2_config}{online}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labeltitlesource}{title}
+      \field{title}{GRUB2 Konfiguration - ubuntuusers.de}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.ubuntuusers.de/GRUB_2/Konfiguration/
+      \endverb
+      \verb{url}
+      \verb https://wiki.ubuntuusers.de/GRUB_2/Konfiguration/
+      \endverb
+    \endentry
+    \entry{ubuntu_man_preseeding}{online}{}
+      \field{sortinit}{U}
+      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
+      \field{labeltitlesource}{title}
+      \field{title}{Ubuntu Manual - Installation mittels Preseeding}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://help.ubuntu.com/lts/installation-guide/amd64/apb.html
+      \endverb
+      \verb{url}
+      \verb https://help.ubuntu.com/lts/installation-guide/amd64/apb.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
