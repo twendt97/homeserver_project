@@ -14,4 +14,11 @@
   urldate   = {2019-10-25},
 }
 
+@Online{ubuntuusers_grub2_config,
+  title     = {GRUB2 Konfiguration - ubuntuusers.de},
+  timestamp = {2019-10-25},
+  url       = {https://wiki.ubuntuusers.de/GRUB_2/Konfiguration/},
+  urldate   = {2019-10-25},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

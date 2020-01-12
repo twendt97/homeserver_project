@@ -1,0 +1,59 @@
+\chapter{Motivation}
+\label{sec:motivation}
+
+Spätestens seitdem wir angefangen haben, täglich mehrere Computer verschiedener
+Größe vom Handy bis zur Full-Size-Workstation zu nutzen, haben wir uns bezüglich
+des Austausches von Informationen und Dateien einige Probleme eingehandelt: Ohne
+die Nutzung einer Cloud-Lösung ist es schwierig, den automatisierten Austausch
+zwischen den Geräten zu realisieren. Das Ergebnis ist oft doppelte und
+inkonsistente Datenhaltung auf unterschiedlichen Medien (USB-Stick, Handy,
+Laptop etc.). Die grundlegenden Probleme, zu denen im vorliegenden Projekt
+Lösungen erarbeitet werden sollen, lassen sich auf die folgenden drei
+Stichpunkte reduzieren.
+
+\begin{enumerate}
+\item Konsistenz: Wie kann ein einheitlicher Versionsstand zwischen den Geräten
+  hergestellt werden?
+\item Verfügbarkeit: Wie kann jedem Gerät zu jedem Zeitpunkt die vollständige
+  Datenbasis zur Verfügung gestellt werden?
+\item Vertraulichkeit: Es ist nicht gewünscht, persönliche Daten mit
+  multinationalen Konzernen zu teilen. Wie kann dieses Ziel erreicht werden?
+\end{enumerate}
+
+Die Lösung für Problem 1 und 2 scheint wie bereits angedeutet einfach: Die
+Nutzung einer Cloud-Lösung als verbindende Instanz zwischen allen
+Geräten. Hierzu gibt es bereits fertige Lösungen wie z.B. Google Drive, iCloud,
+Dropbox, OneDrive und viele mehr. All diese Fertiglösungen haben jedoch den
+Nachteil, dass der gesamte persönliche Datenbestand auf einen externen
+(amerikanischen) Server ausgelagert wird und die dahinter stehenden Unternehmen
+damit machen können, was sie möchten. Ist dies für den Nutzer akzeptabel steht
+der Nutzung einer solchen Cloud-Lösung nichts mehr im Wege. Ist man jedoch daran
+interessiert, selbst über seine Daten zu verfügen, muss etwas mehr Aufwand
+getrieben werden.
+
+Auch für Home-Clouds gibt es fertige Lösungen. Zu nennen ist hierbei die
+Serverhardware von QNAP und Synology, welche eine Plug-and-Play-Lösung
+darstellen. Gegen die Nutzung einer solchen Plattform sprechen jedoch folgende
+Gründe:
+
+\begin{itemize}
+\item Preis-Leistungs-Verhältnis: Ein Synology Network-Attached-Storage-Server
+  (NAS) mit einem Dual-Core Prozessor von Intel und 2GB RAM kostet ca. 450\euro{}. Für
+  den selben Preis ist es möglich einen Server aus gebrauchten Teilen mit einem
+  Hexa-Core-Xeon Prozessor und 64GB RAM zusammenzustellen.
+\item Unflexibel: Die Lösungen von QNAP und Synology sind
+  \textit{ausschließlich} als NAS konzipiert. Ein selbst
+  aufgesetzter Server kann z.B. auch als Plattform für ein GitLab ein
+  WordPress-Blog oder Ähnliches dienen.
+\item Begrenzte Erweiterbarkeit: Die Baugröße eines typischen Plug-and-Play-NAS
+  erlaubt keine größeren Upgrades bezüglich Prozessor, RAM und Massenspeicher.
+\end{itemize}
+
+Die Motivation, eine eigene Plattform aufzusetzen, ist damit begründet. Im
+folgenden Kapitel wird kurz die Hard- und Software-Architektur beschrieben.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../doku_server"
+%%% End:

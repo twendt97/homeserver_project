@@ -1,43 +1,36 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.9)  12 OCT 2019 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.11)  11 JAN 2020 21:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **proj_prop.tex
 (./proj_prop.tex
-LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 14 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2017/09/07 v3.24 KOMA-Script document class (article)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent b
+LaTeX2e <2019-10-01> patch level 3
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2019/12/23 v3.28 KOMA-Script document class (article)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2019/12/23 v3.28 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent 
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2019/12/23 v3.28 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2017/09/07 v3.24 KOMA-Script package (loading files)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2019/12/23 v3.28 KOMA-Script package (loading files)
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2017/09/07 v3.24 KOMA-Script package (handling toc-files)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2019/12/23 v3.28 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
-\scr@dte@tocline@numbox=\box26
+\scr@dte@tocline@numbox=\box27
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 133.
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 135.
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 136.
+(tocbasic)             for `toc' on input line 137.
 Class scrartcl Info: You've used standard option `oneside'.
 (scrartcl)           This is correct!
 (scrartcl)           Internally I'm using `twoside=false'.
@@ -51,17 +44,18 @@ Class scrartcl Info: You've used standard option `openbib'.
 (scrartcl)           you'd have to use `bibliography=openstyle' there
 (scrartcl)           instead of `openbib', too.
 Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 208
-0.
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 221
+1.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2017/09/07 v3.24 KOMA-Script font size class option (11pt
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/scrsize11pt.c
+lo
+File: scrsize11pt.clo 2019/12/23 v3.28 KOMA-Script font size class option (11pt
 )
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2017/09/07 v3.24 KOMA-Script package (type area)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2019/12/23 v3.28 KOMA-Script package (type area)
 \ta@bcor=\skip42
-\ta@div=\count79
+\ta@div=\count80
 Package typearea Info: You've used standard option `a4paper'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `paper=a4'.
@@ -94,191 +88,250 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1686.
+(typearea)              on input line 1718.
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\scr@dte@part@maxnumwidth=\skip47
-\scr@dte@section@maxnumwidth=\skip48
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\scr@dte@section@maxnumwidth=\skip47
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4722.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4722.
+\scr@dte@part@maxnumwidth=\skip48
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4730.
 \scr@dte@subsection@maxnumwidth=\skip49
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4740.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4740.
 \scr@dte@subsubsection@maxnumwidth=\skip50
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4750.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4750.
 \scr@dte@paragraph@maxnumwidth=\skip51
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4760.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4760.
 \scr@dte@subparagraph@maxnumwidth=\skip52
-LaTeX Info: Redefining \textsubscript on input line 4161.
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4770.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4770.
 \abovecaptionskip=\skip53
 \belowcaptionskip=\skip54
-\c@pti@nb@sid@b@x=\box27
-\c@figure=\count86
-\c@table=\count87
-Class scrartcl Info: Redefining `\numberline' on input line 5319.
+\c@pti@nb@sid@b@x=\box28
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6001.
+\scr@dte@figure@maxnumwidth=\skip55
+\c@figure=\count87
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6013.
+\scr@dte@table@maxnumwidth=\skip56
+\c@table=\count88
+Class scrartcl Info: Redefining `\numberline' on input line 6177.
 \bibindent=\dimen102
+) (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/12/08 3.37 The Babel package
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/12/08 3.37 Babel switching mechanism
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel-german/ngerman.ld
+f
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count88
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel-german/ngermanb.l
+df
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+ (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/12/08 3.37 Babel common definitions
+\babel@savecnt=\count89
 \U@D=\dimen103
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count90
 )
-Package babel Info: Making " an active character on input line 125.
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language `German (new orthography)' into the format.
 
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for english instead on input line 47.
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+Package babel Info: \l@ngerman = using hyphenrules for english
+(babel)             (\language0) on input line 48.
+Package babel Info: Making " an active character on input line 121.
+))) (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2019/11/10 v7.00c Hypertext links for LaTeX
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 )
-Package pdftexcmds Info: LuaTeX not detected.
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/kvdefinekeys/kvdefineke
+ys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2019/12/15 v1.9 Color options for hyperref/bookmark (HO)
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hycolor/xcolor-patch.sty
+Package: xcolor-patch 2019/12/15 xcolor patch
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/oberdiek/hopatch.sty
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)))
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/letltxmacro/letltxmacro.s
+ty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen104
-\Hy@linkcounter=\count90
-\Hy@pagecounter=\count91
+\Hy@linkcounter=\count91
+\Hy@pagecounter=\count92
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2019/11/10 v7.00c Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count92
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count93
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4509.
-Package hyperref Info: Link nesting OFF on input line 4514.
-Package hyperref Info: Hyper index ON on input line 4517.
-Package hyperref Info: Plain pages OFF on input line 4524.
-Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Hyper figures OFF on input line 4535.
+Package hyperref Info: Link nesting OFF on input line 4540.
+Package hyperref Info: Hyper index ON on input line 4543.
+Package hyperref Info: Plain pages OFF on input line 4550.
+Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count93
-
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+Package hyperref Info: Bookmarks ON on input line 4788.
+\c@Hy@tempcnt=\count94
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5115.
+LaTeX Info: Redefining \url on input line 5147.
 \XeTeXLinkMargin=\dimen105
-\Fld@menulength=\count94
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/bigintcalc/bigintcalc.s
+ty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count95
 \Field@Width=\dimen106
 \Fld@charsize=\dimen107
-Package hyperref Info: Hyper figures OFF on input line 6369.
-Package hyperref Info: Link nesting OFF on input line 6374.
-Package hyperref Info: Hyper index ON on input line 6377.
-Package hyperref Info: backreferencing OFF on input line 6384.
-Package hyperref Info: Link coloring OFF on input line 6389.
-Package hyperref Info: Link coloring with OCG OFF on input line 6394.
-Package hyperref Info: PDF/A mode OFF on input line 6399.
-LaTeX Info: Redefining \ref on input line 6439.
-LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count95
-\c@Item=\count96
-\c@Hfootnote=\count97
+Package hyperref Info: Hyper figures OFF on input line 6418.
+Package hyperref Info: Link nesting OFF on input line 6423.
+Package hyperref Info: Hyper index ON on input line 6426.
+Package hyperref Info: backreferencing OFF on input line 6433.
+Package hyperref Info: Link coloring OFF on input line 6438.
+Package hyperref Info: Link coloring with OCG OFF on input line 6443.
+Package hyperref Info: PDF/A mode OFF on input line 6448.
+LaTeX Info: Redefining \ref on input line 6488.
+LaTeX Info: Redefining \pageref on input line 6492.
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count96
+\c@Item=\count97
+\c@Hfootnote=\count98
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2019/11/10 v7.00c Hyperref driver for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count98
-\c@bookmark@seq@number=\count99
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count99
+\c@bookmark@seq@number=\count100
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/rerunfilecheck/rerunfilec
+heck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/uniquecounter/uniquecou
+nter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+86.
 )
-\Hy@SectionHShift=\skip55
+\Hy@SectionHShift=\skip57
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2018/08/11 v1.3c Input encoding file
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box28
+\@eurobox=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen108
@@ -305,108 +358,108 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
-\AtBeginShipoutBox=\box29
+Package scrbase Info: activating ngerman \contentsname on input line 21.
+Package scrbase Info: activating ngerman \listfigurename on input line 21.
+Package scrbase Info: activating ngerman \listtablename on input line 21.
+\AtBeginShipoutBox=\box30
 Package hyperref Info: Link coloring OFF on input line 21.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-\c@section@level=\count100
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/generic/gettitlestring/gettitle
+string.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count101
 )
 LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
 LaTeX Info: Redefining \nameref on input line 21.
-
-(./proj_prop.out) (./proj_prop.out)
+ (./proj_prop.out) (./proj_prop.out)
 \@outlinefile=\write3
 \openout3 = `proj_prop.out'.
 
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 21.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen110
-\scratchbox=\box30
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen111
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks18
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+Package auxhook Info: \AddLineBeginMainAux comes a little late,
+(auxhook)             because the main .aux file is already opened on input lin
+e 168.
+\BKM@id=\count102
+))
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-bas
+e.sty
+Package: epstopdf-base 2019-12-09 v2.10 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.
+cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 23.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 23.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 45.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 45.
-
 Overfull \hbox (2.02725pt too wide) in paragraph at lines 48--57
-\OT1/cmr/m/n/10.95 Sp[]atestens seit-dem wir an-ge-fan-gen ha-ben, t[]aglich me
-h-re-re Com-pu-ter ver-schie-de-ner Gr[]o^^Ye
+\OT1/cmr/m/n/10.95 Sp[]atestens seit-dem wir ange-fan-gen haben, t[]aglich mehr
+ere Com-put-er ver-schieden-er Gr[]o^^Ye
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 77.
+
+Overfull \hbox (2.28581pt too wide) in paragraph at lines 48--57
+\OT1/cmr/m/n/10.95 tausches von In-for-ma-tio-nen und Dateien einige Prob-leme 
+einge-han-delt: Ohne die Nutzung
+ []
+
+
+Overfull \hbox (1.41885pt too wide) in paragraph at lines 48--57
+\OT1/cmr/m/n/10.95 ein-er Cloud-L[]osung ist es schwierig, den au-toma-tisierte
+n Aus-tausch zwis-chen den Ger[]aten
+ []
+
+
+Overfull \hbox (12.46019pt too wide) in paragraph at lines 59--61
+[]\OT1/cmr/m/n/10.95 Konsistenz: Wie kann ein ein-heitlich-er Ver-sion-s-stand 
+zwis-chen den Ger[]aten hergestellt
+ []
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+{/home/thilo_wendt/.texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+4.
+ (/home/thilo_wendt/.texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 99.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 99.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 102.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 102.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 117.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 117.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 117.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 117.
- [2]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 117.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 117.
-<docker_vis.png, id=66, 1202.4925pt x 960.58875pt>
+
+[2]
+Overfull \hbox (6.2704pt too wide) in paragraph at lines 120--124
+\OT1/cmr/m/n/10.95 Als Be-trieb-ssys-tem soll ein Ubun-tu Serv-er 18.04 zum Ein
+-satz kom-men, be-gr[]undet dadurch,
+ []
+
+
+Overfull \hbox (8.8242pt too wide) in paragraph at lines 125--137
+\OT1/cmr/m/n/10.95 ment[]ares Be-trieb-ssys-tem (im Fall von z.B. NG-INX als We
+b-serv-er) bere-it gestellt. Gekapselt
+ []
+
+<docker_vis.png, id=26, 1202.4925pt x 960.58875pt>
 File: docker_vis.png Graphic file (type png)
 <use docker_vis.png>
 Package pdftex.def Info: docker_vis.png  used on input line 140.
@@ -414,88 +467,38 @@ Package pdftex.def Info: docker_vis.png  used on input line 140.
 Class scrartcl Info: Workaround for not recommended usage of \\ or
 (scrartcl)           \newlinein caption text  on input line 142.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 146.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 146.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 152.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 152.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 158.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 158.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 166.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 166.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 172.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 172.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 172.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 172.
-[3]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 174.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 174.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 184.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 184.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 184.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 184.
- [4 <./docker_vis.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 186.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 186.
-
+[3] [4 <./docker_vis.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 189--196
 
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 202.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 202.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language append on input line 202.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language append on input line 202.
 [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
  (./proj_prop.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
 Package rerunfilecheck Info: File `proj_prop.out' has not changed.
-(rerunfilecheck)             Checksum: 3CD57CBC07FBA5124B6112A7DB7A215A;731.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 7655 strings out of 494757
- 124030 string characters out of 6175786
- 299506 words of memory out of 5000000
- 10920 multiletter control sequences out of 15000+600000
+ 8445 strings out of 494107
+ 150613 string characters out of 6172705
+ 359505 words of memory out of 5000000
+ 12411 multiletter control sequences out of 15000+600000
  5847 words of font info for 22 fonts, out of 8000000 for 9000
- 81 hyphenation exceptions out of 8191
- 42i,6n,51p,8820b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on proj_prop.pdf (5 pages, 102210 bytes).
+ 14 hyphenation exceptions out of 8191
+ 45i,6n,56p,10104b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/thilo_wendt/.texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></home/thilo_wendt/.texlive/2019/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmssbx10.pfb></home/thilo_wendt/.texlive/2019/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></home/thilo_wendt/.texlive/2019/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></home/thilo_wendt/.texlive/2019/texmf-dist/font
+s/type1/public/eurosym/feymr10.pfb>
+Output written on proj_prop.pdf (5 pages, 102224 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream

@@ -1,0 +1,150 @@
+\chapter{Projektdurchführung}
+\label{sec:details}
+
+\section{Hardware}
+\label{sec:hardware}
+
+Die Serverhardware umfasst folgende Komponenten:
+
+\begin{itemize}
+\item Fujitsu D3128-B25 Mainboard mit Intel C602 Server Chipsatz
+\item 8 x 8 GB DDR3-RDIMM ECC Arbeitsspeicher
+\item Intel XEON E5-2560V2 Octa-Core Server-CPU mit Hyperthreading
+\item Effizientes \SI{450}{\watt} Modell Straight Power 11 von be quiet!
+\item Phanteks Enthoo Pro Tower PC-Gehäuse
+\item WD-Blue 250 GB SSD Festplatte
+\item ARCTIC Freezer 12 CO CPU-Kühler
+\item 4 x Seagate ST4000VN008 IronWolf 4 TB HDD Festplatte
+\end{itemize}
+
+All diesen Komponenten ist gemeinsam, dass sie auf Server-Anforderungen wie
+z.B. Dauerbetrieb optimiert sind. Des Weiteren sind viele der Komponenten
+gebraucht sehr günstig verfügbar.
+
+\section{Verwendete Basis-Software}
+\label{sec:software}
+
+\subsection{Betriebssystem}
+\label{sec:sw_os}
+
+Bevor ein sinnvolles Arbeiten auf dem Server möglich ist, steht die Entscheidung
+für ein bestimmtes Betriebssystem und dessen Installation an. Der Autor hat sich
+an dieser Stelle für den Einsatz eines UNIX-basierten Betriebssystems
+entschieden, da für solche Systeme die benötigte Software frei verfügbar
+ist. Als konkrete Distribution wurde Ubuntu Server 16.04 ausgewählt.
+
+Die Installation des Betriebssystems gestaltet sich bei dem gewählten Mainboard
+etwas aufwändiger, weil dieses keine Integrierte Grafikschnittstelle bietet. An
+dieser Stelle ergeben sich zwei Möglichkeiten: Entweder es wird zeitweise eine
+Grafikkarte verwendet, welche über eine PCI-Express Schnittstelle angeschlossen
+werden kann, oder es wird eine \textit{vollautomatische} Installation des OS
+durchgeführt. Im vorliegenden Projekt wurde die letztere Variante
+durchgeführt. Hierfür sind folgende Schritte notwendig:
+
+\begin{enumerate}
+\item \textbf{Erstellung einer Preseed-Datei:} Während der normalen interaktiven
+  Installation werden dem Benutzer verschieden Fragen zur Konfiguration des
+  Betriebssystems gestellt. Diese Fragen können \textit{vor der Installation} in
+  einer Datei beantwortet werden. Canonical stellt eine recht umfangreiche
+  Dokumentation bereit, wie eine Preseed-Datei zu erstellen ist
+  \cite{ubuntu_man_preseeding}. Die in diesem Projekt verwendete
+  Preseeding-Datei stammt aus \cite{urbanpenguin_preseeding_wp} und wurde an die
+  Bedürfnisse angepasst.
+\item \textbf{Bereitstellung der Datei:} Auch hier gibt es mehrere
+  Möglichkeiten: Die Datei kann über einen FTP Server, auf dem
+  Installationsdatenträger oder im initrd bereit gestellt werden. Die
+  Bereitstellung über FTP bietet sich bei der Installation über PXE an. In
+  diesem Fall erschien die einfachste Möglichkeit, die Datei auf dem
+  Installationsmedium bereit zu stellen. Hierfür wird z.B. mit dem Programm
+  \textbf{Cubic} ein angepasstes ISO-Image erstellt. Die Datei muss dann nur an
+  eine beliebige Stelle in dem Image abgelegt werden, wobei sich der Ordner
+  ,,preseed'' anbietet.
+\item \textbf{Bekanntmachung der Datei für den Bootloader:} Der Bootloader muss
+  noch erfahren, dass er die Preseed-Datei nutzen soll, anstatt den Benutzer
+  nach den Optionen zu fragen. Die folgenden Dateien stellen den Inhalt des
+  Menüs dar, welches die Optionen beim starten der Installation entgegen
+  nimmt. Der Option ,,Install Ubuntu Server'' wird der Pfad der Preseed-Datei
+  mit der Option \texttt{file=/cdrom/path/to/file} hinzu gefügt. Je nach
+  BIOS-Version müssen unterschiedliche Dateien editiert werden.
+  \begin{itemize}
+  \item Legacy: Die Datei \texttt{/isolinux/txt.cfg} muss editiert werden.
+  \item UEFI: die Datei \texttt{/boot/grub/grub.cfg} muss editiert werden.
+  \end{itemize}
+\item \textbf{Weitere Optionen:} Es muss eine Standard-Option mit einem Timeout
+  definiert werden, damit die Installation automatisch Startet. In der Datei
+  \texttt{/isolinux/txt.cfg} geschieht das über den Eintrag \texttt{default
+    <label>} und in der Datei \texttt{/boot/grub/grub.cfg} so wie in
+  \cite{ubuntuusers_grub2_config} beschrieben. Des Weiteren müssen noch die
+  Optionen für \texttt{locale} z.B. \texttt{en\_us} und
+  \texttt{keyboard-configuration/layoutcode} z.B. mit \texttt{us} vorbelegt
+  werden, da diese abgefragt werden, \textit{bevor} der Bootloader die
+  Preseed-Datei liest, wo diese Optionen ggf. auch spezifiziert wurden.
+\end{enumerate}
+
+Es empfiehlt sich, die Installation vorher einmal in einer virtuellen Maschine
+zu testen, um festzustellen, ob diese dann auch vollautomatisiert durch
+läuft. Grundsätzlich sollte die Preseed-Methode auch für Ubuntu 18.04
+funktionieren \cite{ubuntu_man_preseeding}, jedoch hatte der Autor massive
+Probleme mit deren Ausführung und es wurde somit auf Ubuntu 16.04 zurück
+gegriffen. Ist es unabdingbar eine neuere Distribution zu nutzen, kann nach der
+Installation unkompliziert auf die neue Version upgegraded werden.
+
+\subsection{Containervirtualisierung mit Docker}
+\label{sec:sw_docker}
+
+Ist die Installation des Betriebssystems überstanden, eröffnen sich nun die
+Gestaltungs\-möglichkeiten des eigentlichen Webservers. Dem Autor sind zwei
+grundsätzliche Herangehensweisen bekannt:
+
+\paragraph{,,Harte'' Installation der Komponenten auf der Maschine}
+
+Es ist möglich, die gewünschte Software (z.B. einen Webserver, nextcloud,
+WordPress usw.) und die benötigten Abhängigkeiten (z.B. eine
+PHP-Laufzeitumgebung) einfach auf der Maschine zu installieren wie jedes andere
+Programm auch. Dies allerdings unschön im Bezug auf Flexibilität und
+Wartbarkeit: Nach einiger Zeit ist vergessen, welche Komponenten in welcher
+Version installiert wurden. Auch das Upgrade auf neue Versionen ist mit einem
+gewissen Risiko verbunden, da nicht mit garantiert werden kann, ob das System
+nach dem Upgrade noch so läuft wie es soll.
+
+\paragraph{Aufteilung der Komponenten in Container}
+
+Die bessere Lösung wäre eine standardisierte Laufzeit- und Entwicklungsumgebung,
+die sowohl auf dem Testsystem als auch auf dem Produktivsystem identisch
+ist. Genau diese Funktionalität stellt Docker bereit: Eine Funktionalität wird
+in einem \textit{Container} gekapselt. Ein Container ist vergleichbar mit einer
+virtuellen Maschine, die jedoch nativ im Kernel des Host-Systems läuft und
+dadurch wesentlich ressourcensparender ist als eine richtige VM. Alle benötigten
+Abhängigkeiten werden zur Laufzeit geladen und sind auch nur dann auf dem System
+vorhanden. Sobald der Container nicht mehr benötigt wird, kann dieser mit allen
+Abhängigkeiten mit einem Befehl vollständig entfernt werden.
+
+Des Weiteren kann mit Docker risikofrei ein Versionsupgrade durchgeführt werden:
+Die neue Version einer Software wird lokal ausgiebig getestet und dann auf das
+Produktivsystem geladen. Durch einen Neustart der Container ist das
+Versionsupgrade vollzogen und es gibt nicht mal einen Moment Downtime.
+
+Abgesehen von den Linux-Standard-Werkzeugen und einem Editor (der Autor nutzt
+GNU (x)Emacs) läuft sämtliche Software in Docker-Containern. Die
+Server-Software-Architektur ist in Kapitel \ref{sec:sw_arch} beschrieben. 
+
+
+\input{durchfuehrung/swarch.tex}
+
+
+
+
+
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=0.6\textwidth, page=5, trim=0cm 0cm 0cm 0cm, clip]{docker_vis.png}q
+%   \caption{Docker als Instanz zwischen Applikation und Betriebssytem. \newline Quelle
+%     \href{https://www.docker.com/resources/what-container}{\mbox{Docker.com}}}
+%   \label{fig:docker}
+% \end{figure}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../doku_server"
+%%% End:

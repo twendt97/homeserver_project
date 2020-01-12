@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -21,7 +21,7 @@
   \datalist[entry]{nty/global//global/global}
     \entry{urbanpenguin_preseeding_wp}{online}{}
       \field{sortinit}{B}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labeltitlesource}{title}
       \field{title}{Beschreibung der automatischen Installation von theurbanpenguin}
       \field{urlday}{25}
@@ -35,9 +35,41 @@
       \verb https://www.theurbanpenguin.com/auto-installing-ubuntu-16-04/
       \endverb
     \endentry
+    \entry{docker_compose_reference}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labeltitlesource}{title}
+      \field{title}{Docker Reference - Compose}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.docker.com/compose/
+      \endverb
+      \verb{url}
+      \verb https://docs.docker.com/compose/
+      \endverb
+    \endentry
+    \entry{docker_run_reference}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labeltitlesource}{title}
+      \field{title}{Docker Reference - Run}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.docker.com/engine/reference/run/
+      \endverb
+      \verb{url}
+      \verb https://docs.docker.com/engine/reference/run/
+      \endverb
+    \endentry
     \entry{ubuntuusers_grub2_config}{online}{}
       \field{sortinit}{G}
-      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labeltitlesource}{title}
       \field{title}{GRUB2 Konfiguration - ubuntuusers.de}
       \field{urlday}{25}
@@ -53,7 +85,7 @@
     \endentry
     \entry{ubuntu_man_preseeding}{online}{}
       \field{sortinit}{U}
-      \field{sortinithash}{36a2444f5238e0dcf4bb59704df6624d}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
       \field{labeltitlesource}{title}
       \field{title}{Ubuntu Manual - Installation mittels Preseeding}
       \field{urlday}{25}
