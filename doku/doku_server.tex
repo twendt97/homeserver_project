@@ -18,7 +18,12 @@ numbers=noenddot
 \usepackage{graphicx}
 \usepackage{pdflscape}
 \usepackage{siunitx}
+
+%set up minted for normal use and longlisting
+\usepackage{caption}
 \usepackage[chapter]{minted}
+\newenvironment{longlisting}{\captionsetup{type=listing,belowskip=12pt}}{}
+\setminted{breaklines=true}
 
 \usepackage[backend=biber,citestyle=numeric,natbib=true]{biblatex} % Use the biber backend with the authoryear citation style (which resembles APA)
 
@@ -54,6 +59,7 @@ numbers=noenddot
 \printbibliography[heading=bibintoc]
 
 \appendix
+\include{append_code/append_code}
 
 
 \end{document}
@@ -62,4 +68,5 @@ numbers=noenddot
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
 %%% End:

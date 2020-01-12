@@ -1,0 +1,40 @@
+version: '3.1'
+
+services:
+
+  nextcloud:
+    image: nextcloud
+    restart: always
+    ports:
+      - 80
+    volumes:
+      - /path/to/storage/nextcloud/html:/var/www/html
+      - /path/to/storage/nextcloud/custom_apps:/var/www/html/custom_apps
+      - /path/to/storage/nextcloud/config:/var/www/html/config
+      - /path/to/storage/nextcloud/data:/var/www/html/data
+    environment:
+      MYSQL_HOST: db
+      MYSQL_PASSWORD: <save_pw>
+      MYSQL_DATABASE: db_nextcloud
+      MYSQL_USER: nextcloud
+      VIRTUAL_HOST: <domain_der_nextcloud>
+      LETSENCRYPT_HOST: <domain_der_nextcloud>
+      LETSENCRYPT_EMAIL: <erreichbare_mail_adresse>
+      NEXTCLOUD_ADMIN_USER: <administrator_name>
+      NEXTCLOUD_ADMIN_PASSWORD: <save_pw>
+      NEXTCLOUD_TRUSTED_DOMAINS: <domain_der_nextcloud>
+    networks:
+      - frontend
+      - backend
+      - proxy-tier
+
+networks:
+  frontend:
+    external:
+      name: frontend
+  backend:
+    external:
+      name: backend
+  proxy-tier:
+    external:
+      name: proxy-tier

@@ -202,6 +202,37 @@ erfolgt über Cron-Jobs angelehnt an die Angaben aus \cite{cron_sync_so}.
 
 \input{durchfuehrung/swarch.tex}
 
+\section{Webdesign mit Django}
+\label{sec:webdesign}
+
+Eine weiterer Anwendungsfall für einen Homeserver ist das Betreiben eines
+eigenen Webauftrittes. Zunächst war geplant, diesen mit WordPress zu
+gestalten. Eine WordPress-Instanz laufen zu lassen ist ähnlich unkompliziert wie
+das starten der Nextcloud wie in Listing \ref{list:comp_nc} in Anhang
+\ref{chap:dockercomp_append} beschrieben. Dies wurde auch gemacht und es wurde
+eine Weile mit WordPress experimentiert jedoch ergaben sich dabei folgende
+Erkenntnisse:
+
+\begin{itemize}
+\item Pro
+  \begin{itemize}
+  \item WordPress ist sehr einfach in Betrieb zu nehmen und es geht schnell
+    einen ersten Webauftritt zu gestalten
+  \item WordPress ist im Prinzip gut erweiterbar mit eigenen Themes
+  \item Es gibt eine ganze Reihe fertig verfügbarer Plugins und Themes die nur
+    geladen werden müssen und dann sofort genutzt werden können.
+  \end{itemize}
+\item Kontra
+  \begin{itemize}
+  \item WordPress ist in PHP geschrieben, eine Sprache in der alles möglich ist,
+    in der jedoch auch alles selber gemacht werden muss. Für Anfänger birgt
+    diese Sprache ähnlich wie C das Risiko schwere Sicherheitslücken zu
+    produzieren.
+  \item WordPress ist sehr auf den Anwendungsfall Webblog ausgerichtet. Andere
+    Anwendungen sind möglich, jedoch ist die WordPress API strickt vorgegeben.
+  \end{itemize}
+\end{itemize}
+
 % \begin{figure}[h]
 %   \centering
 %   \includegraphics[width=0.6\textwidth, page=5, trim=0cm 0cm 0cm 0cm, clip]{docker_vis.png}q

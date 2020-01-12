@@ -1,0 +1,72 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+lScalar+lScalarPlain}{version}\PYG{p+pIndicator}{:} \PYG{l+s}{\PYGZsq{}3.1\PYGZsq{}}
+
+\PYG{l+lScalar+lScalarPlain}{services}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{nginx\PYGZhy{}proxy}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{build}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{./proxy}
+    \PYG{l+lScalar+lScalarPlain}{container\PYGZus{}name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{nginx\PYGZhy{}proxy}
+    \PYG{l+lScalar+lScalarPlain}{ports}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{80:80}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{443:443}
+    \PYG{l+lScalar+lScalarPlain}{volumes}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{certs:/etc/nginx/certs:ro}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{vhost.d:/etc/nginx/vhost.d}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{html:/usr/share/nginx/html}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/var/run/docker.sock:/tmp/docker.sock:ro}
+    \PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{frontend}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}
+
+  \PYG{l+lScalar+lScalarPlain}{letsencrypt\PYGZhy{}companion}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{image}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{jrcs/letsencrypt\PYGZhy{}nginx\PYGZhy{}proxy\PYGZhy{}companion}
+    \PYG{l+lScalar+lScalarPlain}{container\PYGZus{}name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{nginx\PYGZhy{}proxy\PYGZhy{}le}
+    \PYG{l+lScalar+lScalarPlain}{restart}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{always}
+    \PYG{l+lScalar+lScalarPlain}{volumes}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{certs:/etc/nginx/certs:rw}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{vhost.d:/etc/nginx/vhost.d}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{html:/usr/share/nginx/html}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/var/run/docker.sock:/var/run/docker.sock:ro}
+    \PYG{l+lScalar+lScalarPlain}{environment}\PYG{p+pIndicator}{:}
+\PYG{c+c1}{\PYGZsh{}     \PYGZhy{} ACME\PYGZus{}CA\PYGZus{}URI=https://acme\PYGZhy{}staging\PYGZhy{}v02.api.letsencrypt.org/directory}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{NGINX\PYGZus{}PROXY\PYGZus{}CONTAINER=nginx\PYGZhy{}proxy}
+    \PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{frontend}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}
+      
+  \PYG{l+lScalar+lScalarPlain}{db}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{image}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{mariadb}
+    \PYG{l+lScalar+lScalarPlain}{container\PYGZus{}name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{db}
+    \PYG{l+lScalar+lScalarPlain}{command}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZhy{}\PYGZhy{}transaction\PYGZhy{}isolation=READ\PYGZhy{}COMMITTED \PYGZhy{}\PYGZhy{}binlog\PYGZhy{}format=ROW}
+    \PYG{l+lScalar+lScalarPlain}{restart}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{always}
+    \PYG{l+lScalar+lScalarPlain}{volumes}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/home/fuchs/storage/mariadb:/var/lib/mysql}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{./docker\PYGZhy{}entrypoint\PYGZhy{}initdb.d:/docker\PYGZhy{}entrypoint\PYGZhy{}initdb.d}
+    \PYG{l+lScalar+lScalarPlain}{environment}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{MYSQL\PYGZus{}ROOT\PYGZus{}PASSWORD}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{WOLF\PYGZus{}FUCHS\PYGZus{}20052018\PYGZus{}db}
+    \PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{backend}
+
+\PYG{c+c1}{\PYGZsh{}  adminer:}
+\PYG{c+c1}{\PYGZsh{}    image: adminer}
+\PYG{c+c1}{\PYGZsh{}    restart: always}
+\PYG{c+c1}{\PYGZsh{}    ports:}
+\PYG{c+c1}{\PYGZsh{}      \PYGZhy{} 8080:8080}
+\PYG{c+c1}{\PYGZsh{}    networks:}
+\PYG{c+c1}{\PYGZsh{}      \PYGZhy{} backend}
+
+\PYG{l+lScalar+lScalarPlain}{volumes}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{certs}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{vhost.d}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{html}\PYG{p+pIndicator}{:}
+
+\PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{backend}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{backend}
+  \PYG{l+lScalar+lScalarPlain}{frontend}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{frontend}
+  \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}
+\end{Verbatim}

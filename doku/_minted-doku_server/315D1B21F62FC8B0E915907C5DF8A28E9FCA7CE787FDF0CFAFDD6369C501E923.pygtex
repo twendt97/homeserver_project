@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+lScalar+lScalarPlain}{version}\PYG{p+pIndicator}{:} \PYG{l+s}{\PYGZsq{}3.1\PYGZsq{}}
+
+\PYG{l+lScalar+lScalarPlain}{services}\PYG{p+pIndicator}{:}
+
+  \PYG{l+lScalar+lScalarPlain}{nextcloud}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{image}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{nextcloud}
+    \PYG{l+lScalar+lScalarPlain}{restart}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{always}
+    \PYG{l+lScalar+lScalarPlain}{ports}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{80}
+    \PYG{l+lScalar+lScalarPlain}{volumes}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/path/to/storage/nextcloud/html:/var/www/html}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/path/to/storage/nextcloud/custom\PYGZus{}apps:/var/www/html/custom\PYGZus{}apps}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/path/to/storage/nextcloud/config:/var/www/html/config}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{/path/to/storage/nextcloud/data:/var/www/html/data}
+    \PYG{l+lScalar+lScalarPlain}{environment}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{MYSQL\PYGZus{}HOST}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{db}
+      \PYG{l+lScalar+lScalarPlain}{MYSQL\PYGZus{}PASSWORD}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}save\PYGZus{}pw\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{MYSQL\PYGZus{}DATABASE}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{db\PYGZus{}nextcloud}
+      \PYG{l+lScalar+lScalarPlain}{MYSQL\PYGZus{}USER}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{nextcloud}
+      \PYG{l+lScalar+lScalarPlain}{VIRTUAL\PYGZus{}HOST}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}domain\PYGZus{}der\PYGZus{}nextcloud\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{LETSENCRYPT\PYGZus{}HOST}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}domain\PYGZus{}der\PYGZus{}nextcloud\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{LETSENCRYPT\PYGZus{}EMAIL}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}erreichbare\PYGZus{}mail\PYGZus{}adresse\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{NEXTCLOUD\PYGZus{}ADMIN\PYGZus{}USER}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}administrator\PYGZus{}name\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{NEXTCLOUD\PYGZus{}ADMIN\PYGZus{}PASSWORD}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}save\PYGZus{}pw\PYGZgt{}}
+      \PYG{l+lScalar+lScalarPlain}{NEXTCLOUD\PYGZus{}TRUSTED\PYGZus{}DOMAINS}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{\PYGZlt{}domain\PYGZus{}der\PYGZus{}nextcloud\PYGZgt{}}
+    \PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{frontend}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{backend}
+      \PYG{p+pIndicator}{\PYGZhy{}} \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}
+
+\PYG{l+lScalar+lScalarPlain}{networks}\PYG{p+pIndicator}{:}
+  \PYG{l+lScalar+lScalarPlain}{frontend}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{frontend}
+  \PYG{l+lScalar+lScalarPlain}{backend}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{backend}
+  \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}\PYG{p+pIndicator}{:}
+    \PYG{l+lScalar+lScalarPlain}{external}\PYG{p+pIndicator}{:}
+      \PYG{l+lScalar+lScalarPlain}{name}\PYG{p+pIndicator}{:} \PYG{l+lScalar+lScalarPlain}{proxy\PYGZhy{}tier}
+\end{Verbatim}
