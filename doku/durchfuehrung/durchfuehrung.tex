@@ -124,16 +124,83 @@ Die neue Version einer Software wird lokal ausgiebig getestet und dann auf das
 Produktivsystem geladen. Durch einen Neustart der Container ist das
 Versionsupgrade vollzogen und es gibt nicht mal einen Moment Downtime.
 
-Abgesehen von den Linux-Standard-Werkzeugen und einem Editor (der Autor nutzt
-GNU (x)Emacs) läuft sämtliche Software in Docker-Containern. Die
-Server-Software-Architektur ist in Kapitel \ref{sec:sw_arch} beschrieben. 
+Abgesehen von den Linux-Standard-Werkzeugen dem Dateisystem und einem Editor
+(der Autor nutzt GNU (x)Emacs) läuft sämtliche Software in
+Docker-Containern. Die Server-Software-Architektur ist in Kapitel
+\ref{sec:sw_arch} beschrieben.
+
+\subsection{Dateisystem}
+\label{sec:filesystem}
+
+Als Dateisystem wird ZFS genutzt. Das von Sun entwickelte und von Oracle
+übernommenen Dateisystem stellt ein vollständiges Toolset zum Aufbau, zur
+Wartung und zur Wiederherstellung eines performanten Speicher-Backends zur
+Verfügung. Die Version ZFS-on-Linux ist darüber hinaus Open-Source und frei auf
+\href{https://github.com/zfsonlinux/zfs}{GitHub} verfügbar. Zum Aufbau des hier
+verwendeten Speicher-Backends wurde als Ausgangspunkt das Tutorial zu ZFS von
+Aaron Toponce gewählt \cite{zfs_tutorial}. Im Folgenden wird kurz die
+Architektur des Speicher-Backends erläutert.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[trim={2cm 0.5cm 0.5cm 2cm},clip,scale=1]{durchfuehrung/figures/DecompositionSP}
+  \caption[Dekomposition des Massenspeichers]{Der eingesetzte Massenspeicher
+    besteht aus vier HDD Festplatten mit einer Kapazität von jeweils 4TB und
+    einer SSD Festplatte mit einer Kapazität von 250GB, welche von ZFS als
+    Schreib -und Lesecache genutzt wird.}
+  \label{fig:decompsp}
+\end{figure}
+
+Abbildung \ref{fig:decompsp} zeigt die physische Zusammensetzung des Speicher-Backends. ZFS stellt sog. Z-Pools bereit. Diese sind i.d.R Zusammensetzungen aus verschiedenen physikalischen Festplatten. Die Organisation lautet wie folgt:
+
+\begin{itemize}
+\item Z-Pool \texttt{storage}:
+  \begin{itemize}
+  \item RAIDZ1 (entspricht einem RAID5) bestehend aus
+    \begin{itemize}
+    \item HDD1
+    \item HDD2
+    \item HDD3
+    \end{itemize}
+  \item ZFS Intent Log (ZIL, Schreibcache)
+    \begin{itemize}
+    \item Partition 1 von der SSD
+    \end{itemize}
+  \item Adjustable Replacement Cache (ARC, Lesecache)
+    \begin{itemize}
+    \item Partition 2 von der SSD
+    \end{itemize}
+  \end{itemize}
+\item Z-Pool \texttt{backup}
+  \begin{itemize}
+  \item HDD4
+  \end{itemize}
+\end{itemize}
+
+Eine ähnliche Auflistung ist mit dem Kommando \texttt{zpool status}
+erzeugbar. ZFS zeigt schon hier seine Mächtigkeit, indem mit wenigen Befehlen
+ein RAID5 kombiniert mit einem schnellen Schreib-Lese-Cache aufgebaut werden
+kann. Des Weiteren ist das dargestellte System immun gegen Inkonsistenzen, da es
+sich bei ZFS um ein Copy-on-Write-Dateisystem handelt, das bedeutet, dass bei
+der Änderung einer Datei diese erst kopiert dann geändert und dann ersetzt
+wird. Wird eine Änderung unplanmäßig unterbrochen, so ist diese höchsten
+verloren, jedoch die Datei immer noch konsistent.
+
+\subsection{Automatisiertes Backup}
+\label{sec:filesystem_backup}
+
+Für das automatisierte Backup wird das Feature Snapshots kombiniert mit den
+Tools \href{https://github.com/zfsonlinux/zfs-auto-snapshot}{ZFS-Auto-Snapshot}
+\cite{zfs-auto-snapshot} sowie
+\href{https://github.com/jimsalterjrs/sanoid}{Syncoid} \cite{syncoid}
+eingesetzt. Ein Snapshot ist eine Momentaufnahme des Standes eines Z-Pools
+vergleichbar mit einem git commit. Das Tool ZFS-Auto-Snapshot produziert und
+löscht periodisch Snapshots welche mit dem Tool Syncoid einmal täglich vom
+Produktiv-Pool auf den Backup-Pool synchronisiert werden. Die Zeitsteuerung
+erfolgt über Cron-Jobs angelehnt an die Angaben aus \cite{cron_sync_so}.
 
 
 \input{durchfuehrung/swarch.tex}
-
-
-
-
 
 % \begin{figure}[h]
 %   \centering

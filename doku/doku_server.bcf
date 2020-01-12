@@ -2186,8 +2186,12 @@
     <bcf:citekey order="2">urbanpenguin_preseeding_wp</bcf:citekey>
     <bcf:citekey order="3">ubuntuusers_grub2_config</bcf:citekey>
     <bcf:citekey order="4">ubuntu_man_preseeding</bcf:citekey>
-    <bcf:citekey order="5">docker_run_reference</bcf:citekey>
-    <bcf:citekey order="6">docker_compose_reference</bcf:citekey>
+    <bcf:citekey order="5">zfs_tutorial</bcf:citekey>
+    <bcf:citekey order="6">zfs-auto-snapshot</bcf:citekey>
+    <bcf:citekey order="7">syncoid</bcf:citekey>
+    <bcf:citekey order="8">cron_sync_so</bcf:citekey>
+    <bcf:citekey order="9">docker_run_reference</bcf:citekey>
+    <bcf:citekey order="10">docker_compose_reference</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -21,4 +21,47 @@
   urldate   = {2019-10-25},
 }
 
+@Online{docker_run_reference,
+  title     = {Docker Reference - Run},
+  timestamp = {2020-01-12},
+  url       = {https://docs.docker.com/engine/reference/run/},
+  urldate   = {2020-01-12},
+}
+
+@Online{docker_compose_reference,
+  title     = {Docker Reference - Compose},
+  timestamp = {2020-01-12},
+  url       = {https://docs.docker.com/compose/},
+  urldate   = {2020-01-12},
+}
+
+@Online{zfs_tutorial,
+  author    = {Aaron Toponce},
+  title     = {ZFS Tutorial},
+  timestamp = {2020-01-12},
+  url       = {https://pthree.org/2012/04/17/install-zfs-on-debian-gnulinux/},
+  urldate   = {2020-01-12},
+}
+
+@Online{zfs-auto-snapshot,
+  title     = {ZFS Auto Snapshot},
+  timestamp = {2020-01-12},
+  url       = {https://github.com/zfsonlinux/zfs-auto-snapshot},
+  urldate   = {2020-01-12},
+}
+
+@Online{syncoid,
+  title     = {Sanoid und Syncoid},
+  timestamp = {2020-01-12},
+  url       = {https://github.com/jimsalterjrs/sanoid},
+  urldate   = {2020-01-12},
+}
+
+@Online{cron_sync_so,
+  title     = {Cron Job ZFS Synchronisation},
+  timestamp = {2020-01-12},
+  url       = {https://serverfault.com/questions/842531/how-to-perform-incremental-continuous-backups-of-zfs-pool},
+  urldate   = {2020-01-12},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

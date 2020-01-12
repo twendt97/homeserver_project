@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.11)  12 JAN 2020 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.11)  12 JAN 2020 18:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1100,7 +1100,7 @@ m aus Ab-bil-dung []3.1[] aufgef[]uhrt.
 
 pdfTeX warning: pdflatex (file ./anford/figures/AnalyseHS.pdf): PDF inclusion: 
 found PDF version <1.6>, but at most version <1.5> allowed
-<anford/figures/AnalyseHS.pdf, id=63, 447.6725pt x 358.33875pt>
+<anford/figures/AnalyseHS.pdf, id=67, 447.6725pt x 358.33875pt>
 File: anford/figures/AnalyseHS.pdf Graphic file (type pdf)
 <use anford/figures/AnalyseHS.pdf>
 Package pdftex.def Info: anford/figures/AnalyseHS.pdf  used on input line 8.
@@ -1120,7 +1120,7 @@ g mit Dock-er erf[]ullt diese An-forderung.
 
 pdfTeX warning: pdflatex (file ./anford/figures/AnalyseFS.pdf): PDF inclusion: 
 found PDF version <1.6>, but at most version <1.5> allowed
-<anford/figures/AnalyseFS.pdf, id=65, 467.7475pt x 440.64626pt>
+<anford/figures/AnalyseFS.pdf, id=69, 467.7475pt x 440.64626pt>
 File: anford/figures/AnalyseFS.pdf Graphic file (type pdf)
 <use anford/figures/AnalyseFS.pdf>
 Package pdftex.def Info: anford/figures/AnalyseFS.pdf  used on input line 17.
@@ -1172,11 +1172,39 @@ Overfull \hbox (23.17265pt too wide) in paragraph at lines 101--109
 .) und die ben[]otigten Abh[]angigkeiten
  []
 
-[9] (./durchfuehrung/swarch.tex
+[9]
+Overfull \hbox (2.27275pt too wide) in paragraph at lines 134--142
+\OT1/cmr/m/n/10.95 Als Dateisys-tem wird ZFS genutzt. Das von Sun en-twick-elte
+ und von Or-a-cle []ubernommenen
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./durchfuehrung/figures/DecompositionSP.pdf): PD
+F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<durchfuehrung/figures/DecompositionSP.pdf, id=137, 282.05376pt x 279.0425pt>
+File: durchfuehrung/figures/DecompositionSP.pdf Graphic file (type pdf)
+<use durchfuehrung/figures/DecompositionSP.pdf>
+Package pdftex.def Info: durchfuehrung/figures/DecompositionSP.pdf  used on inp
+ut line 145.
+(pdftex.def)             Requested size: 210.92139pt x 207.91013pt.
+[10 <./durchfuehrung/figures/DecompositionSP.pdf>]
+Overfull \hbox (2.23625pt too wide) in paragraph at lines 179--187
+\OT1/cmr/m/n/10.95 Sys-tem im-mun gegen Inkon-sis-ten-zen, da es sich bei ZFS u
+m ein Copy-on-Write-Dateisystem
+ []
+
+
+Overfull \hbox (5.01268pt too wide) in paragraph at lines 179--187
+\OT1/cmr/m/n/10.95 und dann er-set-zt wird. Wird eine []Anderung un-planm[]a^^Y
+ig un-ter-brochen, so ist diese h[]ochsten
+ []
+
+(./durchfuehrung/swarch.tex
 
 pdfTeX warning: pdflatex (file ./durchfuehrung/figures/DeploymentOS.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<durchfuehrung/figures/DeploymentOS.pdf, id=132, 356.33125pt x 298.11375pt>
+<durchfuehrung/figures/DeploymentOS.pdf, id=169, 356.33125pt x 298.11375pt>
 File: durchfuehrung/figures/DeploymentOS.pdf Graphic file (type pdf)
 <use durchfuehrung/figures/DeploymentOS.pdf>
 Package pdftex.def Info: durchfuehrung/figures/DeploymentOS.pdf  used on input 
@@ -1185,11 +1213,11 @@ line 16.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]
+[11]
 
 pdfTeX warning: pdflatex (file ./durchfuehrung/figures/DeploymentDB.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<durchfuehrung/figures/DeploymentDB.pdf, id=138, 290.08376pt x 45.16875pt>
+<durchfuehrung/figures/DeploymentDB.pdf, id=179, 290.08376pt x 45.16875pt>
 File: durchfuehrung/figures/DeploymentDB.pdf Graphic file (type pdf)
 <use durchfuehrung/figures/DeploymentDB.pdf>
 Package pdftex.def Info: durchfuehrung/figures/DeploymentDB.pdf  used on input 
@@ -1199,7 +1227,7 @@ line 33.
 
 pdfTeX warning: pdflatex (file ./durchfuehrung/figures/DeploymentRP.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<durchfuehrung/figures/DeploymentRP.pdf, id=139, 287.0725pt x 45.16875pt>
+<durchfuehrung/figures/DeploymentRP.pdf, id=180, 287.0725pt x 45.16875pt>
 File: durchfuehrung/figures/DeploymentRP.pdf Graphic file (type pdf)
 <use durchfuehrung/figures/DeploymentRP.pdf>
 Package pdftex.def Info: durchfuehrung/figures/DeploymentRP.pdf  used on input 
@@ -1209,7 +1237,7 @@ line 34.
 
 pdfTeX warning: pdflatex (file ./durchfuehrung/figures/DeploymentSSL.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<durchfuehrung/figures/DeploymentSSL.pdf, id=140, 295.1025pt x 45.16875pt>
+<durchfuehrung/figures/DeploymentSSL.pdf, id=181, 295.1025pt x 45.16875pt>
 File: durchfuehrung/figures/DeploymentSSL.pdf Graphic file (type pdf)
 <use durchfuehrung/figures/DeploymentSSL.pdf>
 Package pdftex.def Info: durchfuehrung/figures/DeploymentSSL.pdf  used on input
@@ -1218,31 +1246,38 @@ Package pdftex.def Info: durchfuehrung/figures/DeploymentSSL.pdf  used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./durchfuehrung/figures/DeploymentOS.pdf>] [12 <./durchfuehrung/figures/De
+[12 <./durchfuehrung/figures/DeploymentOS.pdf>] [13 <./durchfuehrung/figures/De
 ploymentDB.pdf> <./durchfuehrung/figures/DeploymentRP.pdf> <./durchfuehrung/fig
 ures/DeploymentSSL.pdf>]
 
 pdfTeX warning: pdflatex (file ./durchfuehrung/figures/CompositionSW.pdf): PDF 
 inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<durchfuehrung/figures/CompositionSW.pdf, id=218, 666.49pt x 396.48125pt>
+<durchfuehrung/figures/CompositionSW.pdf, id=259, 666.49pt x 396.48125pt>
 File: durchfuehrung/figures/CompositionSW.pdf Graphic file (type pdf)
 <use durchfuehrung/figures/CompositionSW.pdf>
 Package pdftex.def Info: durchfuehrung/figures/CompositionSW.pdf  used on input
  line 82.
 (pdftex.def)             Requested size: 666.48837pt x 396.48027pt.
 
-Overfull \hbox (10.66675pt too wide) in paragraph at lines 82--83
+Overfull \hbox (10.66675pt too wide) in paragraph at lines 82--87
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 21.48894pt on input line 85.
+LaTeX Warning: Float too large for page by 21.48894pt on input line 89.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13 <./durchfuehrung/figures/CompositionSW.pdf>]))
+[14 <./durchfuehrung/figures/CompositionSW.pdf>]))
 chapter without number
+
+Overfull \hbox (13.0401pt too wide) in paragraph at lines 53--53
+[]\OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / 
+/ serverfault . com / questions / 842531 / how -[] to -[] perform -[] increment
+al -[]
+ []
+
 
 Overfull \hbox (2.06886pt too wide) in paragraph at lines 53--53
 []\OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / 
@@ -1250,8 +1285,15 @@ Overfull \hbox (2.06886pt too wide) in paragraph at lines 53--53
 ht am 12.01.2020). 
  []
 
+
+Overfull \hbox (14.56624pt too wide) in paragraph at lines 53--53
+[]\OT1/cmr/m/sc/10.95 url\OT1/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 https : / 
+/ github . com / zfsonlinux / zfs -[] auto -[] snapshot$[] \OT1/cmr/m/n/10.95 (
+be-sucht am 12.01.2020). 
+ []
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
-[14
+[15
 
 
 
@@ -1271,10 +1313,10 @@ Package logreq Info: Writing requests to 'doku_server.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
- 28229 strings out of 494107
- 560632 string characters out of 6172705
- 1133527 words of memory out of 5000000
- 31996 multiletter control sequences out of 15000+600000
+ 28264 strings out of 494107
+ 561639 string characters out of 6172705
+ 1133903 words of memory out of 5000000
+ 32022 multiletter control sequences out of 15000+600000
  541064 words of font info for 56 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  46i,8n,78p,10106b,2193s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1289,10 +1331,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/thilo_wendt/.texlive/2
 019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/thilo_wendt/.te
 xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/thilo_we
 ndt/.texlive/2019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on doku_server.pdf (14 pages, 655802 bytes).
+Output written on doku_server.pdf (15 pages, 730841 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -35,6 +35,22 @@
       \verb https://www.theurbanpenguin.com/auto-installing-ubuntu-16-04/
       \endverb
     \endentry
+    \entry{cron_sync_so}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeltitlesource}{title}
+      \field{title}{Cron Job ZFS Synchronisation}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://serverfault.com/questions/842531/how-to-perform-incremental-continuous-backups-of-zfs-pool
+      \endverb
+      \verb{url}
+      \verb https://serverfault.com/questions/842531/how-to-perform-incremental-continuous-backups-of-zfs-pool
+      \endverb
+    \endentry
     \entry{docker_compose_reference}{online}{}
       \field{sortinit}{D}
       \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
@@ -83,6 +99,52 @@
       \verb https://wiki.ubuntuusers.de/GRUB_2/Konfiguration/
       \endverb
     \endentry
+    \entry{syncoid}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labeltitlesource}{title}
+      \field{title}{Sanoid und Syncoid}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/jimsalterjrs/sanoid
+      \endverb
+      \verb{url}
+      \verb https://github.com/jimsalterjrs/sanoid
+      \endverb
+    \endentry
+    \entry{zfs_tutorial}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f6d25252bd446fedbc7ec09a883b4794}{%
+           family={Toponce},
+           familyi={T\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6d25252bd446fedbc7ec09a883b4794}
+      \strng{fullhash}{f6d25252bd446fedbc7ec09a883b4794}
+      \strng{bibnamehash}{f6d25252bd446fedbc7ec09a883b4794}
+      \strng{authorbibnamehash}{f6d25252bd446fedbc7ec09a883b4794}
+      \strng{authornamehash}{f6d25252bd446fedbc7ec09a883b4794}
+      \strng{authorfullhash}{f6d25252bd446fedbc7ec09a883b4794}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ZFS Tutorial}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pthree.org/2012/04/17/install-zfs-on-debian-gnulinux/
+      \endverb
+      \verb{url}
+      \verb https://pthree.org/2012/04/17/install-zfs-on-debian-gnulinux/
+      \endverb
+    \endentry
     \entry{ubuntu_man_preseeding}{online}{}
       \field{sortinit}{U}
       \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
@@ -97,6 +159,22 @@
       \endverb
       \verb{url}
       \verb https://help.ubuntu.com/lts/installation-guide/amd64/apb.html
+      \endverb
+    \endentry
+    \entry{zfs-auto-snapshot}{online}{}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labeltitlesource}{title}
+      \field{title}{ZFS Auto Snapshot}
+      \field{urlday}{12}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/zfsonlinux/zfs-auto-snapshot
+      \endverb
+      \verb{url}
+      \verb https://github.com/zfsonlinux/zfs-auto-snapshot
       \endverb
     \endentry
   \enddatalist

@@ -1,0 +1,74 @@
+version: '3.1'
+
+services:
+  nginx-proxy:
+    build: ./proxy
+#    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - certs:/etc/nginx/certs:ro
+      - vhost.d:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - frontend
+      - proxy-tier
+
+  letsencrypt-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: nginx-proxy-le
+    restart: always
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhost.d:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+#      - ACME_CA_URI=https://acme-staging-v02.api.letsencrypt.org/directory
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    networks:
+      - frontend
+      - proxy-tier
+#    depends_on:
+#      - nginx-proxy
+
+
+  db:
+    image: mariadb
+    container_name: db
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - /home/fuchs/storage/mariadb:/var/lib/mysql
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: WOLF_FUCHS_20052018_db
+    networks:
+      - backend
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080
+#    networks:
+#      - backend
+
+volumes:
+  certs:
+  vhost.d:
+  html:
+
+networks:
+  backend:
+    external:
+      name: backend
+  frontend:
+    external:
+      name: frontend
+  proxy-tier:
+    external:
+      name: proxy-tier
