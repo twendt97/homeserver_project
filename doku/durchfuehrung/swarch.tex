@@ -33,12 +33,13 @@ Dockerfile definiert wurden.
   \includegraphics{durchfuehrung/figures/DeploymentDB}
   \includegraphics{durchfuehrung/figures/DeploymentRP}
   \includegraphics{durchfuehrung/figures/DeploymentSSL}
+  \includegraphics[scale=0.8]{durchfuehrung/figures/DeploymentNC}
   \caption[Deployment-Diagramm Anwendungen]{Deployment der Anwendungen auf die
     dazugehörigen Docker-Container}
   \label{fig:depldb}
 \end{figure}
 
-\newpage
+
 \subsection{Starten der Docker-Container}
 \label{sec:sw_arch_start}
 
@@ -59,6 +60,8 @@ Im hier vorgestellten System wurde eine \texttt{docker-compose.yml}-Datei für
 Basisdienste wie die Datenbank und den Reverse Proxy, sowie eine Datei für die
 konkrete Anwendung wie die Nextcloud. Dieses Verfahren ermöglicht eine getrennte
 Verwaltung von Infrastruktur und Anwendung.
+
+\newpage
 
 \subsection{Interne Kommunikation der Container}
 \label{sec:sw_arch_kom}

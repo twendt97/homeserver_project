@@ -54,7 +54,7 @@ durchgeführt. Hierfür sind folgende Schritte notwendig:
   Möglichkeiten: Die Datei kann über einen FTP Server, auf dem
   Installationsdatenträger oder im initrd bereit gestellt werden. Die
   Bereitstellung über FTP bietet sich bei der Installation über PXE an. In
-  diesem Fall erschien die einfachste Möglichkeit, die Datei auf dem
+  diesem Projekt wurde die Möglichkeit gewählt, die Datei auf dem
   Installationsmedium bereit zu stellen. Hierfür wird z.B. mit dem Programm
   \textbf{Cubic} ein angepasstes ISO-Image erstellt. Die Datei muss dann nur an
   eine beliebige Stelle in dem Image abgelegt werden, wobei sich der Ordner
@@ -99,9 +99,9 @@ grundsätzliche Herangehensweisen bekannt:
 \paragraph{,,Harte'' Installation der Komponenten auf der Maschine}
 
 Es ist möglich, die gewünschte Software (z.B. einen Webserver, nextcloud,
-WordPress usw.) und die benötigten Abhängigkeiten (z.B. eine
+WordPress usw.) und die benötigten Abhängig\-keiten (z.B. eine
 PHP-Laufzeitumgebung) einfach auf der Maschine zu installieren wie jedes andere
-Programm auch. Dies allerdings unschön im Bezug auf Flexibilität und
+Programm auch. Dies ist allerdings unschön im Bezug auf Flexibilität und
 Wartbarkeit: Nach einiger Zeit ist vergessen, welche Komponenten in welcher
 Version installiert wurden. Auch das Upgrade auf neue Versionen ist mit einem
 gewissen Risiko verbunden, da nicht mit garantiert werden kann, ob das System
@@ -181,7 +181,7 @@ Eine ähnliche Auflistung ist mit dem Kommando \texttt{zpool status}
 erzeugbar. ZFS zeigt schon hier seine Mächtigkeit, indem mit wenigen Befehlen
 ein RAID5 kombiniert mit einem schnellen Schreib-Lese-Cache aufgebaut werden
 kann. Des Weiteren ist das dargestellte System immun gegen Inkonsistenzen, da es
-sich bei ZFS um ein Copy-on-Write-Dateisystem handelt, das bedeutet, dass bei
+sich bei ZFS um ein Copy-on-Write-Dateisystem handelt. Das bedeutet, dass bei
 der Änderung einer Datei diese erst kopiert dann geändert und dann ersetzt
 wird. Wird eine Änderung unplanmäßig unterbrochen, so ist diese höchsten
 verloren, jedoch die Datei immer noch konsistent.
@@ -209,9 +209,8 @@ Eine weiterer Anwendungsfall für einen Homeserver ist das Betreiben eines
 eigenen Webauftrittes. Zunächst war geplant, diesen mit WordPress zu
 gestalten. Eine WordPress-Instanz laufen zu lassen ist ähnlich unkompliziert wie
 das starten der Nextcloud wie in Listing \ref{list:comp_nc} in Anhang
-\ref{chap:dockercomp_append} beschrieben. Dies wurde auch gemacht und es wurde
-eine Weile mit WordPress experimentiert jedoch ergaben sich dabei folgende
-Erkenntnisse:
+\ref{chap:dockercomp_append} beschrieben. Es wurde eine Weile mit WordPress
+experimentiert jedoch ergaben sich dabei folgende Erkenntnisse:
 
 \begin{itemize}
 \item Pro
@@ -232,6 +231,36 @@ Erkenntnisse:
     Anwendungen sind möglich, jedoch ist die WordPress API strickt vorgegeben.
   \end{itemize}
 \end{itemize}
+
+Während der Entwicklung mit WordPress wurde ein anderes Framework gefunden,
+welches wesentlich mehr Freiheitsgrade bei vertretbarem Aufwand
+ermöglicht. Dieses Framework heißt Django und es ist in der Skriptsprache Python
+geschrieben. Pro und Kontra seien auch hier kurz aufgeführt:
+
+\begin{itemize}
+\item Pro:
+  \begin{itemize}
+  \item Django nimmt viele Routinearbeiten ab, die sonst mit Webentwicklung
+    verbunden sind.
+  \item Applikationen in Django lassen sich gut voneinander trennen, kapseln und
+    wiederverwenden
+  \item Django kommt mit einigen angenehmen Features wie einer integrierten
+    Administratoroberfläche und User-Management
+  \item Django ist gut dokumentiert
+  \end{itemize}
+\item Kontra:
+  \begin{itemize}
+  \item Bis zum ersten ,,schönen'' Ergebnis ist der Weg etwas länger als mit
+    WordPress
+  \item Es muss mehr selbst gemacht werden.
+  \end{itemize}
+\end{itemize}
+
+Da der Anwendungsfall im Falle dieses und eines anderen Projektes weit mehr als
+ein simpler Webblog ist, hat sich der Entwickler für die Verwendung von Django
+als Framework entschieden. Hier steht die Entwicklung jedoch noch recht am
+Anfang und somit ist noch kein Ergebnis vorhanden. Eine Django-Instanz lässt
+sich jedoch genau wie andere Applikationen in einem Docker-Container kapseln.
 
 % \begin{figure}[h]
 %   \centering
